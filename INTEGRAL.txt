@@ -1,0 +1,86 @@
+Integral //Agregar todos los campos, si falta alguno validar uso (Agregar si es necesario)//Truncate//
+INSERT INTO accounts (service_level,business_center_id,next_renewal_date,sync_key,acl_team_set_id,acl_team_set_id ) 
+SELECT service_level,business_center_id,next_renewal_date,sync_key,acl_team_set_id,acl_team_set_id FROM db_blim_original.accounts LIMIT 0,10
+
+accounts_cstm
+
+INSERT INTO accounts_audit (event_id,date_updated) 
+SELECT event_id,date_updated FROM db_blim_original.accounts_audit LIMIT 0,10
+
+INSERT INTO acl_role_sets (sync_key ) 
+SELECT sync_key FROM db_blim_original.acl_role_sets LIMIT 0,10
+
+
+INSERT INTO activities(sync_key ) 
+SELECT sync_key FROM db_blim_original.activities LIMIT 0,10
+
+INSERT INTO blim_payments(sync_key, acl_team_set_id ,assigned_user_id) 
+SELECT sync_key, acl_team_set_id ,assigned_user_id FROM db_blim_original.blim_payments LIMIT 0,10
+
+INSERT INTO blim_payments_audit	 (event_id,date_updated) 
+SELECT event_id,date_updated FROM db_blim_original.blim_payments_audit LIMIT 0,10
+
+INSERT INTO blim_payments_cstm	 (payment_card_c, payment_status_c) 
+SELECT payment_card_c, payment_status_c FROM db_blim_original.blim_payments_cstm LIMIT 0,10
+
+INSERT INTO bugs(follow_up_datetime,resolved_datetime,hours_to_resolution,business_hours_to_resolution,pending_processing,sync_key,acl_team_set_id ) 
+SELECT follow_up_datetime,resolved_datetime,hours_to_resolution,business_hours_to_resolution,pending_processing,sync_key,acl_team_set_id  FROM db_blim_original.bugs LIMIT 0,10
+
+INSERT INTO bugs_audit(event_id,date_updated) 
+SELECT event_id,date_updated FROM db_blim_original.bugs_audit LIMIT 0,10
+
+INSERT INTO calls(repeat_selectorrepeat_days,repeat_ordinal,repeat_unit,recurrence_id, transcript,aws_contact_id, call_recording_url,sync_keyacl_team_set_id ) 
+SELECT repeat_selectorrepeat_days,repeat_ordinal,repeat_unit,recurrence_id, transcript,aws_contact_id, call_recording_url,sync_keyacl_team_set_id FROM db_blim_original.calls LIMIT 0,10
+
+INSERT INTO campaigns(sync_key,acl_team_set_id) 
+SELECT sync_key,acl_team_set_id FROM db_blim_original.campaigns LIMIT 0,10
+
+INSERT INTO cases (follow_up_datetimeresolved_datetime,hours_to_resolution,business_hours_to_resolution,pending_processing,business_center_id,source,request_close,request_close_date,rimary_contact_id, sync_key,acl_team_set_id, first_response_target_datetime,first_response_actual_datetime,hours_to_first_response,business_hrs_to_first_response,first_response_var_from_target,first_response_sla_met,first_response_user_id,first_response_sent,) 
+SELECT follow_up_datetimeresolved_datetime,hours_to_resolution,business_hours_to_resolution,pending_processing,business_center_id,source,request_close,request_close_date,rimary_contact_id, sync_key,acl_team_set_id, first_response_target_datetime,first_response_actual_datetime,hours_to_first_response,business_hrs_to_first_response,first_response_var_from_target,first_response_sla_met,first_response_user_id,first_response_sent, FROM db_blim_original.cases LIMIT 0,10
+
+INSERT INTO cases_audit	(event_id,date_updated) 
+SELECT event_id,date_updated FROM db_blim_original.cases_audit LIMIT 0,10	
+
+
+INSERT INTO contacts(acl_team_set_id business_center_id,cookie_consent,cookie_consent_received_on,dp_business_purpose,dp_consent_last_updated,entry_source,portal_user_company_name,site_user_id,sync_key ,) 
+SELECT acl_team_set_id business_center_id,cookie_consent,cookie_consent_received_on,dp_business_purpose,dp_consent_last_updated,entry_source,portal_user_company_name,site_user_id,sync_key FROM db_blim_original.contacts LIMIT 0,10	
+
+INSERT INTO contacts_audit(event_id,date_updated) 
+SELECT event_id,date_updated FROM db_blim_original.contacts_audit LIMIT 0,10	
+
+INSERT INTO contracts(acl_team_set_id,sync_key) 
+SELECT acl_team_set_id,sync_key FROM db_blim_original.contracts LIMIT 0,10	
+
+INSERT INTO contracts_audit(event_id,date_updated) 
+SELECT event_id,date_updated FROM db_blim_original.contracts_audit LIMIT 0,10	
+
+INSERT INTO emails(acl_team_set_id direction,outbound_email_id,reply_to_id,state ,sync_key, total_attachments) 
+SELECT acl_team_set_id direction,outbound_email_id,reply_to_id,state ,sync_key, total_attachments FROM db_blim_original.campaigns LIMIT 0,10	
+
+INSERT INTO emails_email_addr_rel(parent_type parent_id,date_entered,date_modified,) 
+SELECT sync_key,acl_team_set_id FROM db_blim_original.emails_email_addr_rel LIMIT 0,10	
+
+INSERT INTO email_addresses(confirmation_requested_on	) 
+SELECT confirmation_requested_on FROM db_blim_original.email_addresses LIMIT 0,10	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+

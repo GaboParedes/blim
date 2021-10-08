@@ -1,4 +1,4 @@
-Integral //Agregar todos los campos, si falta alguno validar uso (Agregar si es necesario)//Truncate//
+Integral //Agregar todos los campos, si falta alguno validar uso (Agregar si es necesario)
 INSERT INTO accounts (service_level,business_center_id,next_renewal_date,sync_key,acl_team_set_id,acl_team_set_id ) 
 SELECT service_level,business_center_id,next_renewal_date,sync_key,acl_team_set_id,acl_team_set_id FROM db_blim_original.accounts LIMIT 0,10
 
